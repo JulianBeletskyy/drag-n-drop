@@ -1,0 +1,107 @@
+.phone {
+  border-radius: 40px;
+  box-shadow: 0 0.5rem 2rem 0.5rem rgba(0,0,0,.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background: #fff;
+  width: 395px;
+}
+.screen {
+  width: 375px;
+  min-height: 760px;
+  border-radius: 33px;
+  margin: 10px;
+  background-color: #eff2f7;
+  padding-bottom: 1rem;
+}
+.notch {
+  position: absolute;
+  width: 220px;
+  height: 31px;
+  top: 10px;
+  left: 50%;
+  z-index: 2;
+  background: #fff;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  transform: translate(-50%,0);
+}
+.notch:before {
+  content: '';
+  height: 6px;
+  width: 60px;
+  left: 50%;
+  position: absolute;
+  top: 9px;
+  margin-left: -30px;
+  background: #000;
+  opacity: .05;
+  border-radius: 6px;
+  transform: translate(-5px,0);
+}
+.notch:after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  top: 9px;
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  background: #000;
+  opacity: .05;
+  transform: translate(35px,0);
+}
+.block-handle {
+  position: absolute;
+  background: #273444;
+  width: 10px;
+  height: 100%;
+  left: -100px;
+  width: 30px;
+  height: 100%;
+  font: normal normal normal 14px/1 "Font Awesome 5 Pro";
+  font-weight: 600;
+  opacity: .6;
+  transition: opacity .15s ease;
+  border-radius: 2px;
+  cursor: grab;
+}
+
+.block-handle:before {
+  content: "\f0c9";
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%,-50%);
+  font-size: 1.15rem;
+}
+.profile-avatar {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+.drag-item {
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .screen {
+    width: auto;
+  }
+  .block-handle {
+    left: 0;
+  }
+  .drag-content {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .phone {
+    width: 100%;
+  }
+}

@@ -1,0 +1,11 @@
+.styles_overlay__CLSq- {
+	z-index: 1030;
+}
+
+.styles_closeButton__20ID4 {
+	outline: none !important;
+}
+
+.modal-body {
+	pointer-events: unset;
+}
